@@ -4,7 +4,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    /* font-size: 15px; */
     line-height: 1.7;
     color: #ececee;
     background-color: #000000;
@@ -14,6 +13,32 @@ body {
     background-size: 4%;
     /* height: 100vh; */
 }
+
+#back {
+    position: fixed;
+    font-size: 3rem;
+    top: 20px;
+    left: 50px;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* ::-webkit-scrollbar-thumb {
+    background-color: #7F00FF;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+} */
 
 #title {
     text-align: center;
@@ -92,24 +117,21 @@ body {
 .menu {
     width: 100%;
     display: table;
-    margin-left: 3%;
 }
 
 .officer {
     /* background-color: red; */
     display: table-row;
-
 }
 
 .comp {
     display: table-cell;
-    top: 30%;
-    right: 50%;
-    width: 40%;
+    /* top: 30%; */
+    /* right: 50%; */
+    /* width: 40%; */
     /* height: 60%; */
-    margin-left: 10%;
     z-index: 9;
-    overflow: hidden;
+    /* overflow: hidden; */
     box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.3);
     background-color: #FFFFFF;
     /* dot */
@@ -125,10 +147,9 @@ body {
 }
 
 .officer-text {
-
     display: table-cell;
     /* background-color: aqua; */
-    height: 50px;
+    /* height: 50px; */
     text-align: center;
     vertical-align: middle;
     line-height: 50px;
@@ -136,8 +157,8 @@ body {
 
 #officer-text {
     margin-left: 10%;
-    margin-right: 10%;
-    font-size: 1.5vh;
+    margin-right: 15%;
+    font-size: 2vh;
 }
 
 @keyframes border-transform {
