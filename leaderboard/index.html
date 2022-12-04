@@ -9,7 +9,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <script>
-    
+    fetch('https://coding-club-bot-d55da-default-rtdb.firebaseio.com/.json')
+        .then((response) => response.json())
+        .then((data) =>
+            updateLeaderboard(data)
+        );
+
+    function updateLeaderboard(data) {
+        for (var i = 0; i < 5; i++) {
+            document.getElementById(i.toString()).innerHTML = data.users[i].firstName + " " + data.users[i].lastName;
+            document.getElementById(i.toString() + "-points").innerHTML = data.users[i].points;
+        }
+    }
 </script>
 
 <body>
@@ -28,28 +39,28 @@
         </tr>
         <tr>
             <td><b style="color: #56B6C4">1.</b></td>
-            <td><b style="color: #56B6C4">Aryan Ramaswamy</b></td>
-            <td style="text-align: center;"><b style="color: #56B6C4">5</b></td>
+            <td><b style="color: #56B6C4" id="0">Aryan Ramaswamy</b></td>
+            <td style="text-align: center;"><b style="color: #56B6C4" id="0-points">5</b></td>
         </tr>
         <tr>
             <td><b style="color: #9567E0">2.</b></td>
-            <td><b style="color: #9567E0">Pranav Aratikatla</b></td>
-            <td style="text-align: center;"><b style="color: #9567E0">5</b></td>
+            <td><b style="color: #9567E0" id="1">Pranav Aratikatla</b></td>
+            <td style="text-align: center;"><b style="color: #9567E0" id="1-points">5</b></td>
         </tr>
         <tr>
             <td><b style="color: #05ac4a">3.</b></td>
-            <td><b style="color: #05ac4a">Sebastian Farrington</b></td>
-            <td style="text-align: center;"><b style="color: #05ac4a">5</b></td>
+            <td><b style="color: #05ac4a" id="2">Sebastian Farrington</b></td>
+            <td style="text-align: center;"><b style="color: #05ac4a" id="2-points">5</b></td>
         </tr>
         <tr>
             <td><b style="color: #D90077">4.</b></td>
-            <td><b style="color: #D90077">Your mom</b></td>
-            <td style="text-align: center;"><b style="color: #D90077">5</b></td>
+            <td><b style="color: #D90077" id="3">Your mom</b></td>
+            <td style="text-align: center;"><b style="color: #D90077" id="3-points">5</b></td>
         </tr>
         <tr>
             <td><b style="color: #F7A579">5.</b></td>
-            <td><b style="color: #F7A579">Gottem</b></td>
-            <td style="text-align: center;"><b style="color: #F7A579">5</b></td>
+            <td><b style="color: #F7A579" id="4">Gottem</b></td>
+            <td style="text-align: center;"><b style="color: #F7A579" id="4-points">5</b></td>
         </tr>
     </table>
 
